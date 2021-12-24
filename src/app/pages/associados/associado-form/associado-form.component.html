@@ -1,1 +1,93 @@
-Associados-form
+
+<div class=" content">
+    <div class=" row">
+      <div class=" col-md-12">
+        <div class=" card">
+          <div class=" card-header">
+            <h4 class=" card-title">Novo Associado</h4>
+          </div>
+         
+          <div class=" card-body">
+            <form [formGroup]="resourceForm" (submit)="submitForm()">
+
+              <div class="card-body">
+                <div class="form-row">
+                  
+                  <div class="form-group col-md-4">
+                    <label for="name">Nome</label>
+                    <input type="text" class="form-control" id="nome" formControlName="nome">
+                    <app-form-field-error [form-control]="resourceForm.get('nome')"></app-form-field-error>
+                  </div>
+          
+                  <div class="form-group col-md-4">
+                    <label for="decricao">CPF</label>
+                    <input type="text" class="form-control" id="cpf" formControlName="cpf">
+                    <app-form-field-error [form-control]="resourceForm.get('cpf')"></app-form-field-error>
+                  </div>
+
+                  <div class="form-group col-md-4">
+                    <label for="decricao">Data Nascimento</label>
+                    <input type="text" class="form-control" id="dataNascimento" formControlName="dataNascimento">
+                    <app-form-field-error [form-control]="resourceForm.get('dataNascimento')"></app-form-field-error>
+                  </div>
+
+                </div>
+
+                <div class="form-row">
+
+                  <div class="form-group col-md-4">
+                    <label for="decricao">RG</label>
+                    <input type="text" class="form-control" id="rg" formControlName="rg">
+                    <app-form-field-error [form-control]="resourceForm.get('rg')"></app-form-field-error>
+                  </div>
+                  
+                  <div class="form-group col-md-4">
+                    <label for="name">Nome da mãe</label>
+                    <input type="text" class="form-control" id="nomeDaMae" formControlName="nomeDaMae">
+                    <app-form-field-error [form-control]="resourceForm.get('nomeDaMae')"></app-form-field-error>
+                  </div>
+
+                  <div class="form-group col-md-4">
+                    <label for="decricao">Telefone</label>
+                    <input type="text" class="form-control" id="telefone" formControlName="telefone">
+                    <app-form-field-error [form-control]="resourceForm.get('telefone')"></app-form-field-error>
+                  </div>
+
+                </div>
+
+                <div class="form-row">
+
+                  <div class="form-group col-md-4">
+                    <label for="decricao">Tipo Plano</label>
+                    <input type="text" class="form-control" id="tipoPlano" formControlName="tipoPlano">
+                    <app-form-field-error [form-control]="resourceForm.get('tipoPlano')"></app-form-field-error>
+                  </div>
+                  
+                  <div class="form-group col-md-4">
+                    <label for="name">Número carteira</label>
+                    <input type="text" class="form-control" id="numeroCarteira" formControlName="numeroCarteira">
+                    <app-form-field-error [form-control]="resourceForm.get('numeroCarteira')"></app-form-field-error>
+                  </div>
+                  
+                  <div class="form-group col-md-4">
+                    <label for="decricao">Titular</label>
+                    <input type="text" class="form-control" id="titular" formControlName="titular">
+                    <app-form-field-error [form-control]="resourceForm.get('titular')"></app-form-field-error>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="update ml-auto mr-auto">
+                  <button type="submit" class="btn btn-danger btn-round">Registrar</button>
+                </div>
+              </div>
+            
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

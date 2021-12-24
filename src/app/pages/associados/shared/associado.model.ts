@@ -5,8 +5,15 @@ export class Associado extends BaseResourceModel {
   constructor(
     public nome?: string,
     public cpf?: string,
+    public numeroCarteira?: string,
     public tipoPlano?: string,
-    public numeroCarteira?: string
+    public telefone?: string,
+    public status?: string,
+    public dataNascimento?: string,
+    public nomeDaMae?: string,
+    public rg?: string,
+    public titular?: boolean,
+    
 
   ){
     super();
