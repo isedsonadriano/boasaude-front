@@ -1,4 +1,3 @@
-
 <div class=" content">
     <div class=" row">
       <div class=" col-md-12">
@@ -21,7 +20,7 @@
           
                   <div class="form-group col-md-4">
                     <label for="decricao">CPF</label>
-                    <input type="text" class="form-control" id="cpf" formControlName="cpf">
+                    <input type="text" class="form-control" id="cpf" formControlName="cpf" [textMask]="{mask: MASKS.cpf.textMask}">
                     <app-form-field-error [form-control]="resourceForm.get('cpf')"></app-form-field-error>
                   </div>
 
@@ -49,7 +48,7 @@
 
                   <div class="form-group col-md-4">
                     <label for="decricao">Telefone</label>
-                    <input type="text" class="form-control" id="telefone" formControlName="telefone">
+                    <input type="text" class="form-control" id="telefone" formControlName="telefone" [textMask]="{mask: MASKS.telefone.textMaskFunction}">
                     <app-form-field-error [form-control]="resourceForm.get('telefone')"></app-form-field-error>
                   </div>
 
@@ -59,7 +58,12 @@
 
                   <div class="form-group col-md-4">
                     <label for="decricao">Tipo Plano</label>
-                    <input type="text" class="form-control" id="tipoPlano" formControlName="tipoPlano">
+                    <select name="select" class="form-control" formControlName="tipoPlano">
+                      <option value="Escolha" selected>Escolha</option>
+                      <option value="Particular" >Enfermaria</option>
+                      <option value="Apartamento" >Apartamento</option>
+                      <option value="Vip">Vip</option>
+                    </select>
                     <app-form-field-error [form-control]="resourceForm.get('tipoPlano')"></app-form-field-error>
                   </div>
                   

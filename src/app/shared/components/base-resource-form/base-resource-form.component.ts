@@ -8,6 +8,8 @@ import { BaseResourceService } from "../../services/base-resource.service"
 import { switchMap } from "rxjs/operators";
 
 import toastr from "toastr";
+import { MASKS } from 'ng-brazil';
+
 
 
 @Directive()
@@ -18,6 +20,8 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel> imp
   pageTitle: string;
   serverErrorMessages: string[] = null;
   submittingForm: boolean = false;
+
+  public MASKS = MASKS;
 
   protected route: ActivatedRoute;
   protected router: Router;

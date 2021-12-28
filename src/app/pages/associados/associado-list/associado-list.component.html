@@ -32,11 +32,11 @@
                   <td>{{associado.numeroCarteira}}</td>
                   <td>{{associado.tipoPlano}}</td>
                   <td>
-                    <a>
+                    <a [routerLink]="[associado.id, 'edit']">
                       <button class="btn btn-info btn-icon btn-sm " rel="tooltip" type="button" data-original-title="" title=""><i class="fa fa-user"></i></button>
                    </a>
                     <a >
-                       <button class="btn btn-danger btn-icon btn-sm " rel="tooltip" type="button" data-original-title="" title=""><i class="fa fa-times"></i></button>
+                       <button  (click)="deleteResource(associado)"  class="btn btn-danger btn-icon btn-sm " rel="tooltip" type="button" data-original-title="" title=""><i class="fa fa-times"></i></button>
                     </a>
                   </td>
                 </tr>

@@ -7,6 +7,9 @@ import { RouterModule } from '@angular/router';
 import { AssociadoListComponent } from './associado-list/associado-list.component';
 import { AssociadoFormComponent } from './associado-form/associado-form.component';
 import { AssociadosRoutingModule } from './associados-routing.module';
+import { NgBrazil } from 'ng-brazil';
+import { TextMaskModule } from 'angular2-text-mask';
+
 
 
 @NgModule({
@@ -18,7 +21,9 @@ import { AssociadosRoutingModule } from './associados-routing.module';
     ReactiveFormsModule,
     RouterModule,
     FormsModule,
-    SharedModule 
+    SharedModule,
+    NgBrazil,
+    TextMaskModule,
   ]
 })
 export class AssociadosModule { }
