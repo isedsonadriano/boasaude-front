@@ -6,6 +6,9 @@
         <div class=" card-header">
           <h4 class=" card-title">Prestadores</h4>
         </div>
+        <p>
+          <a class="ml-4" [routerLink]="['/prestadores/new']"><button class="btn btn-danger btn-sm">Novo Prestador</button></a>
+        </p>
         <div class=" card-body">
           <div >     
             
@@ -15,8 +18,7 @@
                   <th>ID</th>
                   <th>Nome</th>
                   <th>CPF</th>
-                  <th>CNPJ</th>
-                  <th>Razão social</th>
+                  <th>Tipo</th>
                   <th class=" text-center">Ações</th>
                 </tr>
               </thead>
@@ -28,8 +30,7 @@
                   <td>{{prestador.id}}</td>
                   <td>{{prestador.nome}}</td>
                   <td>{{prestador.cpf}}</td>
-                  <td>{{prestador.cnpj}}</td>
-                  <td>{{prestador.razaoSocial}}</td>
+                  <td>{{prestador.tipo}}</td>
                   <td>
                     <a>
                       <button class="btn btn-info btn-icon btn-sm " rel="tooltip" type="button" data-original-title="" title=""><i class="fa fa-user"></i></button>

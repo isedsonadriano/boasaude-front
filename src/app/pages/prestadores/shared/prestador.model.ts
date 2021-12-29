@@ -3,9 +3,8 @@ import { BaseResourceModel } from "../../../shared/models/base-resource.model";
 export class Prestador extends BaseResourceModel {
   constructor(
     public nome?: string,
-    public cnpj?: string,
     public cpf?: string,
-    public razaoSocial?: string
+    public tipo?: string
   ){
     super();
   }

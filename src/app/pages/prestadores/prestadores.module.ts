@@ -7,6 +7,8 @@ import { CommonModule } from '@angular/common';
 import { PrestadoresRoutingModule } from './prestadores-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { NgBrazil } from 'ng-brazil';
+import { TextMaskModule } from 'angular2-text-mask';
 @NgModule({
   declarations: [PrestadorListComponent, PrestadorFormComponent],
   imports: [
@@ -16,7 +18,9 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     RouterModule,
     FormsModule,
-    SharedModule 
+    SharedModule,
+    NgBrazil,
+    TextMaskModule
   ]
 })
 export class PrestadoresModule { }
