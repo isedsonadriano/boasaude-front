@@ -6,6 +6,9 @@
         <div class=" card-header">
           <h4 class=" card-title">Conveniados</h4>
         </div>
+        <p>
+          <a class="ml-4" [routerLink]="['/conveniados/new']"><button class="btn btn-danger btn-sm">Novo Conveniado</button></a>
+        </p>
         <div class=" card-body">
           <div >     
             
@@ -14,26 +17,27 @@
                 <tr>
                   <th>ID</th>
                   <th>Nome</th>
-                  <th>CPF</th>
+                  <th>CNPJ</th>
+                  <th>TIPO</th>
                   
                   <th class=" text-center">Ações</th>
                 </tr>
               </thead>
               <tbody>
-      
-             
-
                 <tr *ngFor="let conveniado of resources">
                   <td>{{conveniado.id}}</td>
                   <td>{{conveniado.nome}}</td>
-                  <td>{{conveniado.cpf}}</td>
+                  <td>{{conveniado.cnpj}}</td>
+                  <td>{{conveniado.tipo}}</td>
                   
                   <td>
                     <a>
-                      <button class="btn btn-info btn-icon btn-sm " rel="tooltip" type="button" data-original-title="" title=""><i class="fa fa-user"></i></button>
+                      <button class="btn btn-info btn-icon btn-sm " rel="tooltip" type="button" 
+                          data-original-title="" title=""><i class="fa fa-user" (click)="edit(conveniado.id)"></i></button>
                    </a>
                     <a >
-                       <button class="btn btn-danger btn-icon btn-sm " rel="tooltip" type="button" data-original-title="" title=""><i class="fa fa-times"></i></button>
+                       <button class="btn btn-danger btn-icon btn-sm " rel="tooltip" type="button" 
+                          data-original-title="" title=""><i class="fa fa-times" (click)="deleteResource(conveniado)"></i></button>
                     </a>
                   </td>
                 </tr>

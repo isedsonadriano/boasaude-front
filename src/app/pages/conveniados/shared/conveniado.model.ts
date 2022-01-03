@@ -3,8 +3,9 @@ import { BaseResourceModel } from "../../../shared/models/base-resource.model";
 export class Conveniado extends BaseResourceModel {
   
   constructor(
+    public id?: number,
     public nome?: string,
-    public cpf?: string
+    public cnpj?: string
   ){
     super();
   }

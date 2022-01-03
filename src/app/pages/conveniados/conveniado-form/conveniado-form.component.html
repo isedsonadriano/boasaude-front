@@ -1,1 +1,53 @@
-Conveniado-form
+<div class=" content">
+  <div class=" row">
+    <div class=" col-md-12">
+      <div class=" card">
+        <div class=" card-header">
+          <h4 class=" card-title">Novo Conveniado</h4>
+        </div>
+       
+        <div class=" card-body">
+          <form [formGroup]="resourceForm" (submit)="submitForm()">
+
+            <div class="card-body">
+              <div class="form-row">
+                
+                <div class="form-group col-md-4">
+                  <label for="name">Nome</label>
+                  <input type="text" class="form-control" id="nome" formControlName="nome">
+                  <app-form-field-error [form-control]="resourceForm.get('nome')"></app-form-field-error>
+                </div>
+        
+                <div class="form-group col-md-4">
+                  <label for="decricao">CNPJ</label>
+                  <input type="text" class="form-control" id="cnpj" formControlName="cnpj" [textMask]="{mask: MASKS.cnpj.textMask}">
+                  <app-form-field-error [form-control]="resourceForm.get('cnpj')"></app-form-field-error>
+                </div>
+
+                <div class="form-group col-md-4">
+                  <label for="decricao">Tipo</label>
+                  <select name="select" class="form-control" formControlName="tipo">
+                    <option value="Escolha" selected>Escolha</option>
+                    <option value="HOSPITAL">Hospital</option>
+                    <option value="CLINICA">Clínica</option>
+                    <option value="NAO_INFORMADO" >Não Informado</option>
+                  </select>
+                  <app-form-field-error [form-control]="resourceForm.get('tipo')"></app-form-field-error>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="update ml-auto mr-auto">
+                <button type="submit" class="btn btn-danger btn-round">Salvar</button>
+              </div>
+            </div>
+          
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
