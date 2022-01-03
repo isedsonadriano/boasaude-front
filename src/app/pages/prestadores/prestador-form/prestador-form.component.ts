@@ -13,7 +13,7 @@ export class PrestadorFormComponent extends BaseResourceFormComponent<Prestador>
 
   protected buildResourceForm(): void {
     this.resourceForm = this.formBuilder.group({
-      id: [''],
+      id: [],
       nome: ['', [Validators.required, Validators.minLength(2)]],
       cpf: ['', [Validators.required, NgBrazilValidators.cpf]],
       tipo: ['', [Validators.required]]
