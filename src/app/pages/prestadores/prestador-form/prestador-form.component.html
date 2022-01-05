@@ -27,15 +27,74 @@
                   <div class="form-group col-md-4">
                     <label for="decricao">Tipo</label>
                     <select name="select" class="form-control" formControlName="tipo">
-                      <option value="Escolha" selected>Escolha</option>
-                      <option value="MEDICO" >Médico</option>
-                      <option value="ENFERMEIRO" >Enfermeiro</option>
-                      <option value="NUTRICIONISTA" >Nutricionista</option>
-                      <option value="FISIOTERAPEUTA" >Fisioterapeuta</option>
-                      <option value="DENTISTA" >Dentista</option>
-                      <option value="NAO_INFORMADO" >Não Informado</option>
+                      <option value="Escolha"selected>Escolha</option>
+                      <option value="MEDICO">Médico</option>
+                      <option value="ENFERMEIRO">Enfermeiro</option>
+                      <option value="NUTRICIONISTA">Nutricionista</option>
+                      <option value="FISIOTERAPEUTA">Fisioterapeuta</option>
+                      <option value="DENTISTA">Dentista</option>
+                      <option value="NAO_INFORMADO">Não Informado</option>
                     </select>
                     <app-form-field-error [form-control]="resourceForm.get('tipo')"></app-form-field-error>
+                  </div>
+
+                </div>
+
+                <div class="form-row">
+                  
+                  <div class="form-group col-md-4">
+                    <label for="name">Telefone</label>
+                    <input type="text" class="form-control" id="telefone" formControlName="telefone" [textMask]="{mask: MASKS.telefone.textMask}">
+                    <app-form-field-error [form-control]="resourceForm.get('telefone')"></app-form-field-error>
+                  </div>
+
+                  <div class="form-group col-md-4">
+                    <label for="name">Status</label>
+                    <select name="select" class="form-control" formControlName="status">
+                      <option value="ATIVO" selected>Ativo</option>
+                      <option value="INATIVO">Inativo</option>
+                    </select>
+                    <app-form-field-error [form-control]="resourceForm.get('status')"></app-form-field-error>
+                  </div>
+
+                  <div class="form-group col-md-4">
+                    <label for="name">Conselho</label>
+                    <select name="select" class="form-control" formControlName="conselho">
+                      <option value="" selected>Escolha</option>
+                      <option value="CRAS">CRAS</option>
+                      <option value="COREN">COREN</option>
+                      <option value="CRF">CRF</option>
+                      <option value="CRFA">CRFA</option>
+                      <option value="CREFITO">CREFITO</option>
+                      <option value="CRM">CRM</option>
+                      <option value="CRN">CRN</option>
+                      <option value="CRO">CRO</option>
+                      <option value="CRP">CRP</option>
+                      <option value="OUT">Outros</option>
+                    </select>
+                    <app-form-field-error [form-control]="resourceForm.get('conselho')"></app-form-field-error>
+                  </div>
+
+                </div>
+
+                <div class="form-row">
+                  
+                  <div class="form-group col-md-4">
+                    <label for="name">Numero no Conselho</label>
+                    <input type="text" class="form-control" id="numeroNoConselho" formControlName="numeroNoConselho">
+                    <app-form-field-error [form-control]="resourceForm.get('numeroNoConselho')"></app-form-field-error>
+                  </div>
+
+                  <div class="form-group col-md-4">
+                    <label for="name">CBOS</label>
+                    <input type="text" class="form-control" id="cbos" formControlName="cbos">
+                    <app-form-field-error [form-control]="resourceForm.get('cbos')"></app-form-field-error>
+                  </div>
+
+                  <div class="form-group col-md-4">
+                    <label for="name">CNES</label>
+                    <input type="text" class="form-control" id="cnes" formControlName="cnes">
+                    <app-form-field-error [form-control]="resourceForm.get('cnes')"></app-form-field-error>
                   </div>
 
                 </div>

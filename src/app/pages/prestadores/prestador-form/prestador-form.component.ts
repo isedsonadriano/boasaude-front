@@ -16,7 +16,13 @@ export class PrestadorFormComponent extends BaseResourceFormComponent<Prestador>
       id: [],
       nome: ['', [Validators.required, Validators.minLength(2)]],
       cpf: ['', [Validators.required, NgBrazilValidators.cpf]],
-      tipo: ['', [Validators.required]]
+      tipo: ['', [Validators.required]],
+      telefone: ['', [Validators.required, NgBrazilValidators.telefone]],
+      status: ['', [Validators.required]],
+      conselho: ['', [Validators.required]],
+      numeroNoConselho: ['', [Validators.required]],
+      cbos: ['', [Validators.required]],
+      cnes: ['', [Validators.required]]
     });
   }
   

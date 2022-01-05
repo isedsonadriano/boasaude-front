@@ -9,6 +9,7 @@ import { switchMap } from "rxjs/operators";
 
 import toastr from "toastr";
 import { MASKS } from 'ng-brazil';
+import { NotificationService } from '../../services/notification.service';
 
 
 
@@ -26,6 +27,7 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel> imp
   protected route: ActivatedRoute;
   protected router: Router;
   protected formBuilder: FormBuilder;
+  protected notification: NotificationService;
 
   constructor(
     protected injector: Injector,
@@ -36,6 +38,7 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel> imp
     this.route = this.injector.get(ActivatedRoute);
     this.router = this.injector.get(Router);
     this.formBuilder = this.injector.get(FormBuilder);
+    this.notification = this.injector.get(NotificationService);
   }
 
   ngOnInit() {
@@ -123,6 +126,7 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel> imp
   
   protected actionsForSuccess(resource: T){
     toastr.success("Solicitação processada com sucesso!");
+    // this.notification.notify("Solicitação processada com sucesso!");
 
     const baseComponentPath: string = this.route.snapshot.parent.url[0].path;
 
@@ -134,7 +138,9 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel> imp
 
 
   protected actionsForError(error){
+    console.log('aquiiiii')
     toastr.error("Ocorreu um erro ao processar a sua solicitação!");
+    // this.notification.notify("Ocorreu um erro ao processar a sua solicitação!");
 
     this.submittingForm = false;
 
