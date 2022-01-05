@@ -16,7 +16,9 @@ export class ConveniadoFormComponent extends BaseResourceFormComponent<Conveniad
       id: [],
       nome: ['', [Validators.required, Validators.minLength(2)]],
       cnpj: ['', [Validators.required, NgBrazilValidators.cnpj]],
-      tipo: ['', [Validators.required]]
+      tipo: ['', [Validators.required]],
+      telefone: ['', [Validators.required, NgBrazilValidators.telefone]],
+      status: ['', [Validators.required]]
     });
   }
   
